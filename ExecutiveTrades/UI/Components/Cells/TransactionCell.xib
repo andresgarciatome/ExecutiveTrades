@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" restorationIdentifier="transactionCell" selectionStyle="default" indentationWidth="10" shouldIndentWhileEditing="NO" id="WZS-Fl-imk" customClass="TransactionCell" customModule="ExecutiveTrades" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="WZS-Fl-imk" id="eED-s7-IhA">
+                <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lYv-12-FO8" userLabel="Sku">
+                        <rect key="frame" x="20" y="11.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hYs-di-oZM" userLabel="lineView" colorLabel="IBBuiltInLabel-Orange">
+                        <rect key="frame" x="69" y="5.5" width="1" height="33"/>
+                        <color key="backgroundColor" name="text-secondary-bank"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="33" id="BZv-bq-LRi"/>
+                            <constraint firstAttribute="width" constant="1" id="UMw-Uz-PXZ"/>
+                        </constraints>
+                    </view>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RDV-fX-SYT" userLabel="Products">
+                        <rect key="frame" x="77" y="12" width="41.5" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgK-ZB-gDS" userLabel="Sells">
+                        <rect key="frame" x="352" y="11.5" width="42" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="lYv-12-FO8" firstAttribute="centerY" secondItem="eED-s7-IhA" secondAttribute="centerY" id="BvC-bj-4ko"/>
+                    <constraint firstItem="hYs-di-oZM" firstAttribute="leading" secondItem="lYv-12-FO8" secondAttribute="trailing" constant="7" id="Eo8-cX-Fhb"/>
+                    <constraint firstItem="RDV-fX-SYT" firstAttribute="centerY" secondItem="lYv-12-FO8" secondAttribute="centerY" id="NUq-lF-eCz"/>
+                    <constraint firstAttribute="trailing" secondItem="HgK-ZB-gDS" secondAttribute="trailing" constant="20" id="koL-Ts-8Aq"/>
+                    <constraint firstItem="HgK-ZB-gDS" firstAttribute="centerY" secondItem="RDV-fX-SYT" secondAttribute="centerY" id="m1W-9Q-YuV"/>
+                    <constraint firstItem="RDV-fX-SYT" firstAttribute="leading" secondItem="hYs-di-oZM" secondAttribute="trailing" constant="7" id="m2k-vc-e39"/>
+                    <constraint firstItem="hYs-di-oZM" firstAttribute="centerY" secondItem="eED-s7-IhA" secondAttribute="centerY" id="sU8-5M-m0P"/>
+                    <constraint firstItem="lYv-12-FO8" firstAttribute="leading" secondItem="eED-s7-IhA" secondAttribute="leading" constant="20" id="yWe-oc-Rhi"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="productlLabel" destination="RDV-fX-SYT" id="Bdp-3r-2b0"/>
+                <outlet property="sellsLabel" destination="HgK-ZB-gDS" id="26d-rD-frN"/>
+                <outlet property="skuLabel" destination="lYv-12-FO8" id="7n3-rR-5I1"/>
+            </connections>
+            <point key="canvasLocation" x="-648" y="-504"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <namedColor name="text-secondary-bank">
+            <color red="0.63899999856948853" green="0.63099998235702515" blue="0.63099998235702515" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+    </resources>
+</document>

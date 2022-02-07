@@ -1,0 +1,6 @@
+framework module Pods_ExecutiveTrades_ExecutiveTradesUITests {
+  umbrella header "Pods-ExecutiveTrades-ExecutiveTradesUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
