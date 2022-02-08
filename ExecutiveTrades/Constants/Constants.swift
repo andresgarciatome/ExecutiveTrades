@@ -12,12 +12,14 @@ struct QueueTypes {
 }
 
 struct EndPoints {
-    static let rates = "http://quiet-stone-2094.herokuapp.com/rates.json"
-    static let transactions = "http://quiet-stone-2094.herokuapp.com/transactions.json"
+    static let rates = "http://quiet-stone-2094.herokuapp.com/rates"
+    static let transactions = "http://quiet-stone-2094.herokuapp.com/transactions"
+    static let httpHeaderJson = "application/json"
 }
 
 struct Errors {
     static let notFoundUrl = "Not URL founded"
+    static let conectionError = "It remains to implement connection error system"
 }
 
 struct CellID {

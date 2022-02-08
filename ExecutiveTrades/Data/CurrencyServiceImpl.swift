@@ -30,9 +30,15 @@ class CurrencyServiceImpl: GNBService, CurrencyService {
             return
         }
         
-        let request = AF.request(aUrl)
+        let headers: HTTPHeaders = [
+            .accept(EndPoints.httpHeaderJson)
+        ]
+        
+        let request = AF.request(aUrl,headers: headers)
         request.responseDecodable { (response: DataResponse<Currencies, AFError>) in
             guard let currencies = response.value else {
+                //It remains to implement connection error system
+                print(Errors.conectionError)
                 return
             }
             //save currencies cache
@@ -46,9 +52,5 @@ class CurrencyServiceImpl: GNBService, CurrencyService {
     }
 }
 
-protocol CurrencyService: GNBService {
-    // MARK: Method to call Services
-    func callService(success: @escaping (Currencies) -> Void)
-    func setCalculateCurrencies(currency:Currency)
-}
+
 

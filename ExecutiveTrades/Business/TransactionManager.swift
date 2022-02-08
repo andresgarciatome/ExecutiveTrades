@@ -32,6 +32,14 @@ class TransactionManager: GNBManager {
     
     
     // MARK: - Instance method's
+    
+    #if TEST
+    init(currency: CurrencyService , transaction: TransactionService) {
+        currencyService = currency
+        transactionService = transaction
+        loadCurrencies()
+    }
+    #else
     static public let sharedTransactionManager = TransactionManager(currency: CurrencyServiceImpl(), transaction: TransactionServiceImpl())
     
     //instance to singletone
@@ -41,6 +49,7 @@ class TransactionManager: GNBManager {
         //All currencies are obtained in the Manager instance to optimize data loading.
         loadCurrencies()
     }
+    #endif
     
     // MARK: - Products
     func callProducts(success: @escaping () -> Void) {
