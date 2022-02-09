@@ -1,2 +1,1 @@
 # ExecutiveTrades
-Prueba conceptual 
